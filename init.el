@@ -20,7 +20,8 @@
  ;; If there is more than one, they won't work right.
  '(line-number-mode nil)
  '(package-selected-packages
-   '(company-lsp yasnippet lsp-ui lsp-metals lsp-mode sbt-mode use-package flycheck scala-mode which-key monokai-theme magit))
+   (quote
+    (yasnippet-snippets company-lsp yasnippet lsp-ui lsp-metals lsp-mode sbt-mode use-package flycheck scala-mode which-key monokai-theme magit)))
  '(which-key-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -31,6 +32,7 @@
 
 (load-theme 'monokai t)
 (menu-bar-mode -1)
+(tool-bar-mode -1)
 (scroll-bar-mode -1)
 (global-linum-mode 1)
 (ido-mode 1)
