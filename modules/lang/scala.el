@@ -61,4 +61,11 @@
   (lsp-mode . dap-mode)
   (lsp-mode . dap-ui-mode)
   )
+
+;; Adds metals to the path
+;; Install location based on metals instructions at https://scalameta.org/metals/docs/editors/emacs.html
+(if (eq system-type 'darwin)
+    (add-to-list 'exec-path "/usr/local/bin")
+  )
+
 ;;; scala.el ends here
