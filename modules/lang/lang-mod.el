@@ -3,6 +3,7 @@
 ;; This module installs and configures packages for working with various programming languages and tools.
 
 ;;; Code:
+(load "lang-lsp.el")
 (load "lang-scala.el")
 
 

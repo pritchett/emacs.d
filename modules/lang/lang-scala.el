@@ -10,6 +10,8 @@
 
 ;; Enable scala-mode for highlighting, indentation and motion commands
 (use-package scala-mode
+  :hook (scala-mode . yas-minor-mode)
+        (scala-mode . company-box-mode)
   :interpreter
     ("scala" . scala-mode))
 
@@ -31,26 +33,12 @@
 (use-package flycheck
   :init (global-flycheck-mode))
 
-(use-package lsp-mode
-  ;; Optional - enable lsp-mode automatically in scala files
-  :hook  (scala-mode . lsp)
-         (lsp-mode . lsp-lens-mode)
-  :config (setq lsp-prefer-flymake nil))
-
 ;; Add metals backend for lsp-mode
 (use-package lsp-metals
   :config (setq lsp-metals-treeview-show-when-views-received t))
 
 ;; Enable nice rendering of documentation on hover
 (use-package lsp-ui)
-
-;; lsp-mode supports snippets, but in order for them to work you need to use yasnippet
-;; If you don't want to use snippets set lsp-enable-snippet to nil in your lsp-mode settings
-;;   to avoid odd behavior with snippets and indentation
-(use-package yasnippet)
-
-;; Add company-lsp backend for metals
-(use-package company-lsp)
 
 ;; Use the Debug Adapter Protocol for running tests and debugging
 (use-package posframe
@@ -68,4 +56,4 @@
     (add-to-list 'exec-path "/usr/local/bin")
   )
 
-;;; scala.el ends here
+;;; lang-scala.el ends here
