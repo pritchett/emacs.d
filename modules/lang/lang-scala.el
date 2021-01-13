@@ -35,7 +35,7 @@
 
 ;; Add metals backend for lsp-mode
 (use-package lsp-metals
-  :config (setq lsp-metals-treeview-show-when-views-received t))
+  :config (setq lsp-metals-treeview-show-when-views-received nil)) ;; Setting nil here because of a bug
 
 ;; Enable nice rendering of documentation on hover
 (use-package lsp-ui)

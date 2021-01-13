@@ -5,7 +5,7 @@
 ;;; Code:
 (load "lang-lsp.el")
 (load "lang-scala.el")
-
+(load "lang-csv.el")
 
 (provide 'lang-mod)
 ;;; lang-mod.el ends here
