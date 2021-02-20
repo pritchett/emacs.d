@@ -11,7 +11,8 @@
 ;; Enable scala-mode for highlighting, indentation and motion commands
 (use-package scala-mode
   :hook (scala-mode . yas-minor-mode)
-        (scala-mode . company-box-mode)
+  (scala-mode . company-box-mode)
+  :bind ("s-i" . lsp-ui-imenu)
   :interpreter
     ("scala" . scala-mode))
 
