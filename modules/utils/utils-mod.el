@@ -3,6 +3,7 @@
 ;; Installs and configures project management tools
 ;;; Code:
 (load "utils-kubel.el")
+(load "utils-makefile-executor.el")
 
 (provide 'utils-mod)
 
