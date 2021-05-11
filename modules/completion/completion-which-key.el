@@ -4,4 +4,5 @@
 (use-package which-key)
 
 (which-key-mode)
-;;; ivy.el ends here
+(provide 'completion-which-key)
+;;; completion-which-key.el ends here

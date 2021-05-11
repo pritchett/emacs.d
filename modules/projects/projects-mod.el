@@ -3,6 +3,7 @@
 ;; Installs and configures project management tools
 ;;; Code:
 (load "projects-projectile.el")
+(load "projects-treemacs.el")
 
 (provide 'projects-mod)
 
