@@ -2,11 +2,9 @@
 ;;; Commentary:
 ;;; Code:
 
-(use-package yasnippet)
+(use-package yasnippet
+  :config (yas-reload-all))
 
 (use-package yasnippet-snippets)
-
-(yas-reload-all)
-; (add-hook 'scala-mode-hook #'yas-minor-mode)
 
 ;;; completion-yasnippet.el ends here

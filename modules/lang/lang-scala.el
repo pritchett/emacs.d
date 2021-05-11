@@ -3,15 +3,21 @@
 ;;; Code:
 ; Enable defer and ensure by default for use-package
 ;; Keep auto-save/backup files separate from source code:  https://github.com/scalameta/metals/issues/1027
+(defvar use-package-always-defer)
+(defvar use-package-always-ensure)
 (setq use-package-always-defer t
       use-package-always-ensure t
       backup-directory-alist `((".*" . ,temporary-file-directory))
       auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 
+
 ;; Enable scala-mode for highlighting, indentation and motion commands
+(defvar lsp-metals-show-inferred-type)
 (use-package scala-mode
   :hook (scala-mode . yas-minor-mode)
   (scala-mode . company-box-mode)
+  (scala-mode . linum-mode)
+  :config (setq lsp-metals-show-inferred-type t)
   :bind ("s-i" . lsp-ui-imenu)
   :interpreter
     ("scala" . scala-mode))
@@ -50,11 +56,4 @@
   (lsp-mode . dap-mode)
   (lsp-mode . dap-ui-mode)
   )
-
-;; Adds metals to the path
-;; Install location based on metals instructions at https://scalameta.org/metals/docs/editors/emacs.html
-(if (eq system-type 'darwin)
-    (add-to-list 'exec-path "/usr/local/bin")
-  )
-
 ;;; lang-scala.el ends here

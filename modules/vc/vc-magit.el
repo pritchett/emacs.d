@@ -3,4 +3,6 @@
 ;;; Code:
 (use-package magit)
 
+(use-package forge)
+
 ;;; vc-magit.el ends here

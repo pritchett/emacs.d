@@ -7,7 +7,5 @@
         company-idle-delay 0.0)
   (company-mode))
 
-;; Add company-lsp backend for metals
-(use-package company-lsp)
 (use-package company-box)
 ;;; completion-company.el ends here

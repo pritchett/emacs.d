@@ -4,7 +4,6 @@
 ;;; Code:
 (load "utils-kubel.el")
 (load "utils-makefile-executor.el")
-
 (provide 'utils-mod)
 
 ;;; utils-mod.el ends here
