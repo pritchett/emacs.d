@@ -1,8 +1,11 @@
 ;;; ivy --- Configuration for ivy
 ;;; Commentary:
 ;;; Code:
+(use-package ivy)
+
 (use-package counsel
   :init (ivy-mode 1)
+  (counsel-mode)
 )
 
-;;; ivy.el ends here
+;;; completion-ivy.el ends here

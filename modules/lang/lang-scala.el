@@ -17,8 +17,10 @@
   :hook (scala-mode . yas-minor-mode)
   (scala-mode . company-box-mode)
   (scala-mode . linum-mode)
+  (scala-mode . electric-layout-local-mode)
+  (scala-mode . electric-pair-mode)
+  (scala-mode . lsp)
   :config (setq lsp-metals-show-inferred-type t)
-  :bind ("s-i" . lsp-ui-imenu)
   :interpreter
     ("scala" . scala-mode))
 
@@ -44,16 +46,4 @@
 (use-package lsp-metals
   :config (setq lsp-metals-treeview-show-when-views-received nil)) ;; Setting nil here because of a bug
 
-;; Enable nice rendering of documentation on hover
-(use-package lsp-ui)
-
-;; Use the Debug Adapter Protocol for running tests and debugging
-(use-package posframe
-  ;; Posframe is a pop-up tool that must be manually installed for dap-mode
-  )
-(use-package dap-mode
-  :hook
-  (lsp-mode . dap-mode)
-  (lsp-mode . dap-ui-mode)
-  )
 ;;; lang-scala.el ends here
