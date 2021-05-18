@@ -54,7 +54,8 @@
 (require 'vc-mod)
 (require 'utils-mod)
 
-(server-start)
+(require 'server)
+(unless (server-running-p) (server-start))
 ;;; init.el ends here
 
 (use-package nnreddit)
@@ -82,7 +83,7 @@
  '(magit-diff-use-overlays nil)
  '(nnreddit-python-command "python3")
  '(package-selected-packages
-   '(solarized-theme forge nnreddit treemacs-icons-dired treemacs-magit treemacs-projectile treemacs-all-the-icons god-mode makefile-executor kubel magit counsel-projectile projectile csv-mode lsp-metals flycheck sbt-mode scala-mode lsp-treemacs lsp-ivy lsp-ui lsp-mode exec-path-from-shell yasnippet-snippets yasnippet which-key counsel company-box company-lsp company use-package monokai-theme diminish))
+   '(helpful solarized-theme forge nnreddit treemacs-icons-dired treemacs-magit treemacs-projectile treemacs-all-the-icons god-mode makefile-executor kubel magit counsel-projectile projectile csv-mode lsp-metals flycheck sbt-mode scala-mode lsp-treemacs lsp-ivy lsp-ui lsp-mode exec-path-from-shell yasnippet-snippets yasnippet which-key counsel company-box company-lsp company use-package monokai-theme diminish))
  '(pos-tip-background-color "#FFFACE")
  '(pos-tip-foreground-color "#272822")
  '(vc-annotate-background nil)

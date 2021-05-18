@@ -2,9 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 (use-package exec-path-from-shell
+  :demand
   :config
-  (when (memq window-system '(mac ns x))
-    (exec-path-from-shell-initialize))
-  (when (daemonp)     (exec-path-from-shell-initialize)))
-
+  (when (or (memq window-system '(mac ns x)) (daemonp))
+    (exec-path-from-shell-initialize)))
 ;;; core-path.el ends here
