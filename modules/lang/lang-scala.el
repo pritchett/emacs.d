@@ -20,6 +20,7 @@
   (scala-mode . electric-layout-local-mode)
   (scala-mode . electric-pair-mode)
   (scala-mode . lsp)
+  (scala-mode . hl-line-mode)
   :config (setq lsp-metals-show-inferred-type t)
   :interpreter
     ("scala" . scala-mode))
